@@ -1,0 +1,130 @@
+$no_algos: 6;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav {
+  background-color: rgb(59, 58, 58);
+  color: turquoise;
+  display: grid;
+  grid-template-columns: 30% 65%;
+  column-gap: 5%;
+  padding: 0% 5%;
+  .array-inputs {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    place-content: center;
+    padding: 5% 0%;
+
+    #a_size {
+      padding: 5% 0%;
+    }
+    #a_speed {
+      padding: 5% 0%;
+    }
+    #a_generate {
+      background-color: transparent;
+      border: 2px solid white;
+      border-style: inset;
+      border-radius: 5px;
+      outline: none;
+      color: turquoise;
+      padding: 4% 0% 0% 0%;
+      //padding-left: 20%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .header_right {
+    display: flex;
+    flex-direction: column;
+
+    .nav-heading {
+      display: inline-block;
+      font-family: "Courier New", monospace;
+      //text-align: center;
+      font-size: xxx-large;
+      padding: 3% 0%;
+    }
+    .algos {
+      display: grid;
+      grid-template-columns: repeat($no_algos, (100% / $no_algos));
+      place-content: center;
+      padding: 2% 0%;
+      button {
+        background-color: transparent;
+        border: none;
+        color: turquoise;
+        outline: none;
+        padding: 5% 0%;
+        font-size: large;
+        margin: auto;
+        &:hover {
+          color: white;
+          cursor: pointer;
+          border-top: 1px solid turquoise;
+          border-radius: 5px;
+        }
+      }
+
+      .butt_locked {
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+          background-color: transparent;
+          cursor: wait;
+        }
+      }
+      .butt_selected {
+        background-color: turquoise;
+        color: white;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .butt_unselected {
+        &:hover {
+          background-color: transparent;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+section {
+  #array_container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 70vh;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/*
+@media (max-width: 480px)//Mobiles
+{
+    
+}
+
+@media (min-width: 481px) and (max-width: 1250px)//Tablets
+{
+
+}
+
+@media (min-width: 1251px)//Laptops and up
+{
+
+}
+*/
